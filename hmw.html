@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pinterest interactive picture</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      #picture {
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        top: 10vh;
+        bottom: 30vh;
+        overflow: hidden;
+        /*transition: box-shadow 1.5s;*/
+      }
+
+      #save-button {
+        position: absolute;
+        top: 0px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        font-size: 24pt;
+        color: rgb(255, 0, 0);
+        cursor: pointer;
+        user-select: none;
+      }
+
+      #picture:hover {
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+        transition: box-shadow 0.3s;
+        width: 400px;
+        height: 600px;
+        border-radius: 35px;
+      }
+
+      #picture-overlay {
+        position: absolute;
+        width: 400px;
+        height: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 35px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.5) 0%,
+          rgba(0, 0, 0, 0) 40%
+        );
+      }
+
+      #picture img {
+        width: 400px;
+        height: 600px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        object-fit: cover;
+        border-bottom: 10px;
+        border-radius: 35px;
+        position: relative;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <div id="picture">
+        <div id="picture-overlay"></div>
+        <img
+          src="./3654068d543c4dc1cedcfbf09083b4df.jpg"
+          alt="Fantasy picture"
+        />
+      </div>
+
+      <div id="save-button">Save</div>
+      <div id="instagram.com">instagram.com</div>
+    </div>
+  </body>
+</html>
